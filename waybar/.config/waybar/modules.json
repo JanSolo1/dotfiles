@@ -1,0 +1,193 @@
+{
+    // Wofi
+    "custom/appmenu": {
+        "format": "Apps",
+        "on-click": "wofi --show drun",
+        "tooltip": false
+    },
+
+    // Taskbar
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 18,
+        "tooltip-format": "{title}",
+        "on-click": "activate",
+        "on-click-middle": "close",
+        "ignore-list": [
+            "kitty",
+            "Brave-browser"
+        ]
+    },
+
+    // Group Quicklinks
+    "group/quicklinks": {
+        "orientation": "horizontal",
+        "modules": [
+            "custom/filemanager",
+            "custom/browser"
+         ]
+    },
+
+    // Hyprland Window
+    "hyprland/window": {
+        "rewrite": {
+            "(.*) - Brave": "$1",
+            "(.*) - Chromium": "$1",
+            "(.*) - Brave Search": "$1",
+            "(.*) - Outlook": "$1",
+            "(.*) Microsoft Teams": "$1"
+        },
+        "separate-outputs": true
+    },
+
+    // Workspaces
+    "hyprland/workspaces": {
+        "on-click": "activate",
+        "active-only": false,
+        "format": "{}",
+        "format-icons": {
+            "urgent": "",
+            "active": "",
+            "default": ""
+        },
+        "outputs": {
+            "eDP-1": {
+                "persistent-workspaces": {
+                    "6": 10 // Show workspaces 6 to 10 on eDP-1
+                }
+            },
+            "HDMI-A-1": {
+                "persistent-workspaces": {
+                    "1": 5 // Show workspaces 1 to 5 on HDMI-A-1
+                }
+            }
+        }
+    },
+
+    // Filemanager Launcher
+    "custom/filemanager": {
+        "format": "",
+        "on-click": "dolphin",
+        "tooltip": false
+    },
+    
+    // Browser Launcher
+    "custom/browser": {
+        "format": "",
+        "on-click": "brave",
+        "tooltip": false
+    },  
+
+    // Pulseaudio
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", " ", " "]
+        },
+        "on-click": "pavucontrol"
+    },
+
+    // Network
+    "network": {
+        "format": "{ifname}",
+        "format-wifi": "   {signalStrength}%",
+        "format-ethernet": "  {ifname}",
+        "format-disconnected": "Not connected", //An empty format will hide the module.
+        "tooltip-format": " {ifname} via {gwaddri}",
+        "tooltip-format-wifi": "   {essid} ({signalStrength}%)",
+        "tooltip-format-ethernet": "  {ifname} ({ipaddr}/{cidr})",
+        "tooltip-format-disconnected": "Disconnected",
+        "max-length": 50,
+        "on-click": "kitty -e nmtui"
+    },
+
+    // Group Hardware
+    "group/hardware": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 300,
+            "children-class": "not-memory",
+            "transition-left-to-right": false
+        },        
+        "modules": [
+            "custom/system",
+            "disk",
+            "cpu",
+            "memory"
+        ]
+    },
+
+    // System
+    "custom/system": {
+        "format": "",
+        "tooltip": false
+    },
+
+    // Harddisc space used
+    "disk": {
+        "interval": 30,
+        "format": "D {percentage_used}% ",
+        "path": "/",
+        "on-click": "kitty btop"
+    }, 
+
+    // CPU
+    "cpu": {
+        "format": "/ C {usage}% ",
+        "on-click": "kitty btop"
+    },
+
+    // Memory
+    "memory": {
+        "format": "/ M {}% ",
+        "on-click": "kitty btop"
+    },
+
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+
+    // System tray
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10
+    },
+
+    // Battery
+    "battery": {
+        "bat": "BAT1",
+        "interval": 60,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-icons": ["", "", "", "", ""],
+        "max-length": 25
+    },
+
+    // Clock
+    "clock": {
+        // "timezone": "America/New_York",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": "{:%I:%M %p}",
+        "format-alt": "{:%Y-%m-%d}"
+    }
+}
+
