@@ -14,6 +14,13 @@ Minimalistic look using [Hyprland](https://hyprland.org/) for the tiling window 
 | Status Bar| [Waybar](https://github.com/JanSolo1/dotfiles/tree/main/waybar/.config/waybar) |
 | Shell | [ZSH](https://github.com/JanSolo1/dotfiles/tree/main/zshrc) |
 
+**Set system theme:**
+
+```bash
+gsettings set org.gnome.desktop.interface gtk-theme THEME_NAME
+gsettings set org.gnome.desktop.interface icon-theme ICON_NAME
+gsettings set org.gnome.desktop.interface cursor-theme CURSOR_NAME
+```
 ## Screenshots 
 ![screenshot1](screenshot1.png)
 ![screenshot2](screenshot2.png)
