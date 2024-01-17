@@ -7,12 +7,12 @@ Minimalistic look using [Hyprland](https://hyprland.org/) for the tiling window 
 - Catppuccin Macchiato (System theme)
 - Dracula (Icon theme)
 
-| Dotfiles |
-|-----------| 
-| [Hyprland](https://github.com/JanSolo1/dotfiles/tree/main/hyprland/.config/hypr) |
-| [Kitty](https://github.com/JanSolo1/dotfiles/tree/main/kitty/.config/kitty) |
-| [Waybar](https://github.com/JanSolo1/dotfiles/tree/main/waybar) |
-| [ZSH](https://github.com/JanSolo1/dotfiles/tree/main/zshrc) |
+|APP | Dotfiles |
+|:---:|-----------| 
+| Tiling Windows Manager| [Hyprland](https://github.com/JanSolo1/dotfiles/tree/main/hyprland/.config/hypr) |
+| Terminal | [Kitty](https://github.com/JanSolo1/dotfiles/tree/main/kitty/.config/kitty) |
+| Status Bar| [Waybar](https://github.com/JanSolo1/dotfiles/tree/main/waybar/.config/waybar) |
+| Shell | [ZSH](https://github.com/JanSolo1/dotfiles/tree/main/zshrc) |
 
 ## Screenshots 
 ![screenshot1](screenshot1.png)
