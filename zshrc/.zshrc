@@ -8,7 +8,6 @@ bindkey -v
 zstyle :compinstall filename '/home/janco/.zshrc'
 export PATH="$HOME/.cargo/bin:$PATH"
 
-
 autoload -Uz compinit
 compinit
 eval "$(starship init zsh)"
