@@ -1,1 +1,2 @@
-print("hello from jansolo")
+require("jansolo.remap")
+print("Hello from jansolo")
