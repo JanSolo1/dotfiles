@@ -44,4 +44,19 @@ return require('packer').startup(function(use)
   	'nvim-lualine/lualine.nvim',
   	requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
+
+use {
+    'mawkler/modicator.nvim',
+    after = 'catppuccin', -- Add your colorscheme plugin here
+    setup = function()
+      -- These are required for Modicator to work
+      vim.o.cursorline = true
+      vim.o.number = true
+      vim.o.termguicolors = true
+    end,
+    config = function()
+      require('modicator').setup()
+    end
+  }
+
 end)
