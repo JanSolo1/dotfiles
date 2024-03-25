@@ -13,3 +13,4 @@ compinit
 eval "$(starship init zsh)"
 neofetch
 # End of lines added by compinstall
+eval "$(atuin init zsh)" >> ~/.zshrc
